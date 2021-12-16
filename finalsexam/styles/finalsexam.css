@@ -1,0 +1,161 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+header{
+    height: 100px;
+    background-color: lightblue;
+    padding: 30px;
+}
+main{
+    padding-block: 10px;
+    background-color: #e6e6e6;
+    height: auto;
+    padding-bottom: 10px;
+}
+.clearfix:after{
+    content: "";
+    display:table;
+    table-layout: fixed;
+    clear: both;
+    padding-bottom: 30px;
+}
+section, aside{
+    float: left;
+    height: 100%;
+}
+section{
+    margin: 25px;
+    padding-right: 30px;
+
+}
+aside{
+    width: 50%;
+    padding-left: 30px;
+    margin: .5rem;
+    box-shadow: inset 5px 0 5px -5px gray;
+    padding-bottom: 10px;
+    padding-left: 50px;
+}
+footer{
+    background-color: mistyrose;
+    height: 50px;
+    text-align: center;
+    padding-top: 10px;
+}
+
+ul li{
+    padding-bottom: 5px;
+}
+.profile-image{
+    width: 150px;
+    height: 150px;
+    border-radius: 70%;
+    overflow: hidden;
+    border: 1px solid #6495ED;
+}
+.profile-image-img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+aside div{
+    padding-bottom: 20px;
+}
+h3{
+    color: #db6565;
+    padding: 3px;
+}
+@media all and (min-width: 640px) {
+    header, footer {
+        width: 100%;
+        height: 10%;
+    }
+    .main {
+        float: left;
+        width: 60%;
+        height: 80%;
+    }
+    .aside {
+        float: left;
+        width: 40%;
+        height: 80%;
+
+    }
+}
+
+@media all and (min-width: 960px) {
+    header, footer {
+        width: 100%;
+        height: 10%;
+        box-sizing: border-box;
+    }
+
+    footer {
+        clear: both;
+    }
+
+    .main {
+        float: left;
+        width: 60%;
+        height: 80%;
+    }
+
+    .aside{
+        clear: none;
+        float: left;
+        width: 20%;
+        height: 80%;
+    }
+}
+
+.cube {
+    width: 300px;
+    height: 300px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform-style: preserve-3d;
+    /*animation: ani 5s linear infinite;*/
+    transition: 5s;
+
+}
+
+.cube:hover {
+    transform: rotateY(360deg);
+}
+
+.cube div {
+    width: 100%;
+    height: 100%;
+    background-color: var(--color4);
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    text-transform:uppercase;
+    font-size: 3em;
+    font-weight: 800;
+    letter-spacing: .2em;
+}
+.cube .top {
+    transform: rotateX(90deg) translateZ(150px);
+}
+.cube .bottom {
+    transform: rotateX(-90deg) translateZ(150px);
+}
+.cube .left {
+    transform: rotateY(-90deg) translateZ(150px);
+}
+.cube .right {
+    transform: rotateY(90deg) translateZ(150px);
+}
+.cube .front {
+    transform:translateZ(150px);
+}
+.cube .back{
+    transform:rotateY(0.5turn) translateZ(150px);
+}
